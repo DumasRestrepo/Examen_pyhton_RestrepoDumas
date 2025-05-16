@@ -1,16 +1,15 @@
 from interfaz import menu_calcular_propina, menu_dividir_total, menu_salir
 
 def main():
-        
+    
     while True:
         print("\n=============================================")
         print(" -----------SIMULADOR DE PROPINA----------- ")
         print("=============================================")
-        print('''\n1. Calcular propina y total a pagar\n2.Calcular total a pagar divido entre varias personas\n3.Salir''')
+        print('''\n1. Calcular propina y total a pagar\n2. Calcular total a pagar dividido entre varias personas\n3. Salir''')
         print("=============================================")
-        print("\nPor favor, elige una opción (1-3)\n")
-
-        opcion = input("Seleccione una opción: ")
+        
+        opcion = input("Seleccione una opción (1-3): ")
         
         if opcion == "1":
             menu_calcular_propina()
@@ -18,7 +17,8 @@ def main():
             menu_dividir_total()
         elif opcion == "3":
             menu_salir()
+            break  # Salir del bucle while
         else:
-            print("Opción inválida")
+            print("Opción inválida. Por favor ingrese 1, 2 o 3.")
 
 main()

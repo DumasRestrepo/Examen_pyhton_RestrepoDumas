@@ -1,28 +1,14 @@
-# Simulador de Propina
+def calcular_propina(total, porcentaje):
+    if total <= 0 or porcentaje <= 0:
+        raise ValueError("El monto y el porcentaje deben ser mayores a 0")
+    return total * (porcentaje / 100)
 
-def calcular_propina (total, porcentaje):
-
-    if total < 0 or porcentaje < 0:
-        raise ValueError("El monto a pagar y la propina a dar debe ser mayor a 0")
-    else:
-        calcular_propina = total * (porcentaje / 100)
-        return (f"La propina a dar es: {calcular_propina}")
-    
 def calcular_total_con_propina(total, propina):
-
-    if total < 0 or propina < 0:
-        raise ValueError("El monto a pagar y la propina a dar debe ser mayor a 0")
-    else:
-        calcular_total_con_propina = total + propina
-        return  (f"El monto total a pagar es: {calcular_total_con_propina}")
+    if total <= 0 or propina < 0:  # Propina puede ser 0 si el cliente decide no dar propina
+        raise ValueError("El monto debe ser mayor a 0 y la propina no puede ser negativa")
+    return total + propina
 
 def dividir_total(total, personas):
-
-    personas = int(input("Ingrese la cantidad de personas que van a pagar: "))
-    
-    if personas < 0:
-        raise ValueError("Ingrese un número mayor a 0")
-    else:
-        total_personas = total / personas
-        return (f"El monto a pagar por persona es: {total_personas}")
-    
+    if personas <= 0:
+        raise ValueError("El número de personas debe ser mayor a 0")
+    return total / personas
