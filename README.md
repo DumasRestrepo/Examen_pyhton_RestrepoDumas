@@ -8,6 +8,7 @@ Este proyecto fue desarrollado como parte de un examen académico y tiene como o
 ```
 Examen_pyhton_RestrepoDumas/
 │
+├── README.md
 ├── main.py         # Archivo principal que inicia la aplicación
 ├── interfaz.py     # Contiene el diseño y control de la interfaz gráfica
 ├── calculos.py     # Funciones matemáticas
